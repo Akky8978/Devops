@@ -1,0 +1,7 @@
+--- # master yml file for task
+- hosts: testgp
+  user: ansible
+  become: yes
+  connection: ssh
+  roles:
+       - webserver

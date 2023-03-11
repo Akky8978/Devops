@@ -1,0 +1,12 @@
+--- # Handler sample yml file
+- hosts: testgp
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+         - name: Install httpd package with handlers
+           action: yum name=httpd state=installed
+           notify: start service httpd
+  handlers:
+         - name: start service httpd
+           action: service name=httpd state=restarted

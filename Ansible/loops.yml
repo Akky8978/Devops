@@ -1,0 +1,12 @@
+--- # Loops sample YML file
+- hosts: testgp
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+         - name: create a list of users
+           user: name='{{item}}' state=present
+           with_items:
+                   - user1
+                   - user2
+                   - user3 

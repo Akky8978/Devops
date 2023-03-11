@@ -1,0 +1,11 @@
+--- # ivariable sample test
+- hosts: testgp
+  user: ansible
+  become: yes
+  connection: ssh
+  vars:
+          pkgname: httpd
+  tasks:
+                  - name: install HTTPD on centos 7 
+                    action: yum name='{{pkgname}}' state=installed    
+  

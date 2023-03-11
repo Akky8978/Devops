@@ -1,0 +1,8 @@
+--- # Task with YAMl
+- hosts: testgp
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks: 
+    - name: install HTTPD on centos 7
+      action: yum name=httpd state=installed
