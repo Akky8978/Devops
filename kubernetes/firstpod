@@ -1,10 +1,10 @@
 kind: Pod                              
 apiVersion: v1                     
 metadata:                           
-  name: testpod                  
-spec:                                    
+  name: testpod            #defines the name of the pod                  
+spec:                      #specification of the container contains                     
   containers:                      
-    - name: c00                     
-      image: ubuntu              
-      command: ["/bin/bash", "-c", "while true; do echo Hello-world; sleep 5 ; done"]
-  restartPolicy: Never         # Defaults to Always
+    - name: c00            #defines the container name          
+      image: ubuntu        #defines the container image name      
+      command: ["/bin/bash", "-c", "while true; do echo Hello-world; sleep 5 ; done"]  #define the action which you wants to execute inside the container
+  restartPolicy: Never     # Defaults to Always
